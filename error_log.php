@@ -17,7 +17,7 @@ function countDown()
             return 'Er is iets goed gegaan';  
         } else {
             $log_file = "./errors.log"; 
-            ini_set("log_errors", TRUE);  
+            ini_set("log_errors", true);  
             ini_set('error_log', $log_file); 
             error_log("er is iets fout gegaan", 3, $log_file); 
         }
