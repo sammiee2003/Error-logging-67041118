@@ -16,12 +16,10 @@ function countDown()
         if ($number >= 0 && $number <= 10) {
             return 'Er is iets goed gegaan';  
         } else {
-            
-        $error_message = "er is iets fout gegaan!"; 
-        $log_file = "./errors.log"; 
-        ini_set("log_errors", TRUE);  
-        ini_set('error_log', $log_file); 
-        error_log($error_message, 3, $log_file); 
+            $log_file = "./errors.log"; 
+            ini_set("log_errors", TRUE);  
+            ini_set('error_log', $log_file); 
+            error_log("er is iets fout gegaan", 3, $log_file); 
         }
     } 
 }
